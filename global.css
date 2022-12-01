@@ -70,6 +70,17 @@ button:hover{
 }
 
 
+/* hide scrollbar to prevent weird shifting */
+body::-webkit-scrollbar{
+display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 /* h1{
   font-size: 115px;
   font-family: "Comfortaa";
