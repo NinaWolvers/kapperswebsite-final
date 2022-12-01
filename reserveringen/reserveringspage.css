@@ -1,5 +1,7 @@
 .reserveringspage{
 margin-top: 100px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
 }
 
 #submit{
@@ -56,7 +58,7 @@ label{
 
 .infoforbutton{
 display: grid;
-grid-template-columns: auto auto;
+grid-template-columns: repeat(2, 1fr);
 gap: 4vw;
 }
 
@@ -66,4 +68,9 @@ input[type="radio"]:checked + label{
   border: 2px solid var(--Paars);
 }
 
-
+@media (max-width: 999px){
+  .reserveringspage{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
