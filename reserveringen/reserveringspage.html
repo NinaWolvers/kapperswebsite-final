@@ -36,30 +36,31 @@
       <form action="/action_page.php">
         <p>1. Kies je behandeling</p>
         <h3>Dames</h3>
-        <input type="radio" id="puntjesbijwerken" name="keuzedames" value="puntjesbijwerken">
-        <label for="puntjesbijwerken">Puntjes bijwerken</label><br>
-        <input type="radio" id="korthaar" name="keuzedames" value="korthaar">
-        <label for="korthaar">Kort haar</label><br>
-        <input type="radio" id="middenlanghaar" name="keuzedames" value="middenlanghaar">
-        <label for="middenlanghaar">Middenlang haar (tot schouders)</label><br>
-        <input type="radio" id="langhaar" name="keuzedames" value="langhaar">
-        <label for="langhaar">Lang haar</label><br>  
+        <input type="radio" id="puntjesbijwerkendames" name="keuzedames" value="puntjesbijwerkendames"
+        checked="checked">
+        <label class="labelforbutton" for="puntjesbijwerkendames">Puntjes bijwerken</label><br>
+        <input type="radio" id="korthaardames" name="keuzedames" value="korthaardames">
+        <label class="labelforbutton" for="korthaardames">Kort haar</label><br>
+        <input type="radio" id="middenlanghaardames" name="keuzedames" value="middenlanghaardames">
+        <label class="labelforbutton" for="middenlanghaardames">Middenlang haar (tot schouders)</label><br>
+        <input type="radio" id="langhaardames" name="keuzedames" value="langhaardames">
+        <label class="labelforbutton" for="langhaardames">Lang haar</label><br>  
 
         <h3>Heren</h3>
-        <input type="radio" id="korthaar" name="keuzeheren" value="korthaar">
-        <label for="korthaar">Kort haar</label><br>
-        <input type="radio" id="langhaar" name="keuzeheren" value="langhaar">
-        <label for="langhaar">Lang haar</label><br>
-        <input type="radio" id="korthaartrim" name="keuzeheren" value="korthaartrim">
-        <label for="korthaartrim">Kort haar & baard trimmen</label><br>
-        <input type="radio" id="langhaartrim" name="keuzeheren" value="langhaartrim">
-        <label for="langhaartrim">Lang haar & baard trimmen</label><br>  
+        <input type="radio" id="korthaarheren" name="keuzeheren" value="korthaarheren">
+        <label class="labelforbutton" for="korthaarheren">Kort haar</label><br>
+        <input type="radio" id="langhaarheren" name="keuzeheren" value="langhaarheren">
+        <label class="labelforbutton" for="langhaarheren">Lang haar</label><br>
+        <input type="radio" id="korthaartrimheren" name="keuzeheren" value="korthaartrimheren">
+        <label class="labelforbutton" for="korthaartrimheren">Kort haar & baard trimmen</label><br>
+        <input type="radio" id="langhaartrimheren" name="keuzeheren" value="langhaartrimheren">
+        <label class="labelforbutton" for="langhaartrimheren">Lang haar & baard trimmen</label><br>  
       
         <h3>Finish</h3>
         <input type="radio" id="wassen" name="keuzefinish" value="wassen">
-        <label for="wassen">Wassen</label><br>
+        <label class="labelforbutton" for="wassen">Wassen</label><br>
         <input type="radio" id="wassenfohn" name="keuzefinish" value="wassenfohn">
-        <label for="wassenfohn">Wassen en föhnen</label><br><br>
+        <label class="labelforbutton" for="wassenfohn">Wassen en föhnen</label><br><br>
         
 
         <p>1. Kies je datum</p>
@@ -70,9 +71,9 @@
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
         <input type="radio" id="tijd1" name="keuzetijd" value="tijd1">
-        <label for="tijd1">Van 8:00-8:30</label><br>
+        <label class="labelforbutton" for="tijd1">Van 8:00-8:30</label><br>
         <input type="radio" id="tijd2" name="keuzetijd" value="tijd2">
-        <label for="tijd2">Van 8:30-9:00</label><br><br>
+        <label class="labelforbutton" for="tijd2">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
         <h3>Naam</h3>
@@ -88,14 +89,12 @@
         <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
 
         <h3>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h3>
-        <input type="radio" id="ja" name="keuzereminder" value="ja">
-        <label for="ja">Ja graag! Via</label><br>
-          <input type="radio" id="viamail" name="keuzevia" value="viamail">
-          <label for="viamail">Mail</label><br>
-          <input type="radio" id="viasms" name="keuzevia" value="viasms">
-          <label for="viasms">SMS</label><br>
+          <input type="radio" id="viamail" name="keuzereminder" value="viamail">
+          <label class="labelforbutton" for="viamail">Ja, via mail</label><br>
+          <input type="radio" id="viasms" name="keuzereminder" value="viasms">
+          <label class="labelforbutton" for="viasms">Ja, via SMS</label><br>
         <input type="radio" id="nee" name="keuzereminder" value="nee">
-        <label for="nee">Nee bedankt</label><br><br>
+        <label class="labelforbutton" for="nee">Nee bedankt</label><br><br>
 
 
         <input type="submit" id="submit" value="Submit">

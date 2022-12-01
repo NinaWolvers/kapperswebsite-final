@@ -19,15 +19,24 @@ input[type="radio"]{
   display: none;
 }
 
-
-.label{
+label{
   font-size: 20px;
   font-family: "Poppins";
   margin:0;
+}
 
-  border: 2px solid var(--Grijs);
+.labelforbutton{
+  border: 2px solid var(--Lichtgrijs);
   border-radius: 5px;
   padding: 8px 16px;
   display: flex;
-
 }
+
+
+input[type="radio"]:checked + label{
+  background-color: var(--Paars);
+  color: var(--Wit);
+  border: 2px solid var(--Paars);
+}
+
+
