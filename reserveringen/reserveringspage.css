@@ -45,13 +45,20 @@ label{
   margin:0;
 }
 
+
 .labelforbutton{
   border: 2px solid var(--Lichtgrijs);
   border-radius: 5px;
   padding: 8px 16px;
-  display: flex;
+  display:flex;
+  justify-content:space-between;
 }
 
+.infoforbutton{
+display: grid;
+grid-template-columns: auto auto;
+gap: 4vw;
+}
 
 input[type="radio"]:checked + label{
   background-color: var(--Paars);

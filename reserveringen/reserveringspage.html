@@ -37,40 +37,100 @@
         <p>1. Kies je behandeling</p>
         <h3>Dames</h3>
         <input type="radio" id="puntjesbijwerkendames" name="keuzebehandeling" value="puntjesbijwerkendames"
-        checked="checked">
-        <label class="labelforbutton" for="puntjesbijwerkendames">Puntjes bijwerken</label><br>
+        checked="checked"required>
+        <label class="labelforbutton" for="puntjesbijwerkendames">
+          <div>Puntjes bijwerken</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>10 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="korthaardames" name="keuzebehandeling" value="korthaardames">
-        <label class="labelforbutton" for="korthaardames">Kort haar</label><br>
+        <label class="labelforbutton" for="korthaardames">
+          <div>Kort haar</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>15 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="middenlanghaardames" name="keuzebehandeling" value="middenlanghaardames">
-        <label class="labelforbutton" for="middenlanghaardames">Middenlang haar (tot schouders)</label><br>
+        <label class="labelforbutton" for="middenlanghaardames">
+          <div>Haar tot schouders</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>20 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="langhaardames" name="keuzebehandeling" value="langhaardames">
-        <label class="labelforbutton" for="langhaardames">Lang haar</label><br>  
+        <label class="labelforbutton" for="langhaardames">
+          <div>Lang haar</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>25 eur</div>
+          </div>
+        </label><br>  
 
         <h3>Heren</h3>
         <input type="radio" id="korthaarheren" name="keuzebehandeling" value="korthaarheren">
-        <label class="labelforbutton" for="korthaarheren">Kort haar</label><br>
+        <label class="labelforbutton" for="korthaarheren">
+          <div>Kort haar</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>10 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="langhaarheren" name="keuzebehandeling" value="langhaarheren">
-        <label class="labelforbutton" for="langhaarheren">Lang haar</label><br>
+        <label class="labelforbutton" for="langhaarheren">
+          <div>Lang haar</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>".." eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="korthaartrimheren" name="keuzebehandeling" value="korthaartrimheren">
-        <label class="labelforbutton" for="korthaartrimheren">Kort haar & baard trimmen</label><br>
+        <label class="labelforbutton" for="korthaartrimheren">
+          <div>Kort haar & baard</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>20 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="langhaartrimheren" name="keuzebehandeling" value="langhaartrimheren">
-        <label class="labelforbutton" for="langhaartrimheren">Lang haar & baard trimmen</label><br>  
+        <label class="labelforbutton" for="langhaartrimheren">
+          <div>Lang haar & baard</div>
+          <div class="infoforbutton">
+            <div>30 min</div>
+            <div>".." eur</div>
+          </div>
+        </label><br>  
       
         <h3>Finish</h3>
-        <input type="radio" id="wassen" name="keuzefinish" value="wassen">
-        <label class="labelforbutton" for="wassen">Wassen</label><br>
+        <input type="radio" id="wassen" name="keuzefinish" value="wassen" required>
+        <label class="labelforbutton" for="wassen">
+          <div>Wassen</div>
+          <div class="infoforbutton">
+            <div>15 min</div>
+            <div>10 eur</div>
+          </div>
+        </label><br>
         <input type="radio" id="wassenfohn" name="keuzefinish" value="wassenfohn">
-        <label class="labelforbutton" for="wassenfohn">Wassen en föhnen</label><br><br>
+        <label class="labelforbutton" for="wassenfohn">
+          <div>Wassen en föhnen</div>
+          <div class="infoforbutton">
+            <div>15 min</div>
+            <div>20 eur</div>
+          </div>
+        </label><br><br>
         
 
-        <p>1. Kies je datum</p>
-          <label for="afspraakdatum">Datum van afspraak:</label>
+        <p>2. Kies een moment</p>
+          <label for="afspraakdatum"><h3>Datum afspraak</h3></label>
           <input type="date" id="afspraakdatum" name="afspraakdatum"
           value="2022-11-01"
-          min="2022-11-01" max="2024-11-011"><br><br>
+          min="2022-11-01" max="2024-11-011" required><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
-        <input type="radio" id="tijd1" name="keuzetijd" value="tijd1">
+        <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required>
         <label class="labelforbutton" for="tijd1">Van 8:00-8:30</label><br>
         <input type="radio" id="tijd2" name="keuzetijd" value="tijd2">
         <label class="labelforbutton" for="tijd2">Van 8:30-9:00</label><br><br>
@@ -94,12 +154,12 @@
           <input type="radio" id="viasms" name="keuzereminder" value="viasms">
           <label class="labelforbutton" for="viasms">Ja, via SMS</label><br>
         <input type="radio" id="nee" name="keuzereminder" value="nee">
-        <label class="labelforbutton" for="nee">Nee bedankt</label><br><br>
+        <label class="labelforbutton" for="nee">Nee, bedankt</label><br><br>
 
         <h3>Opmerkingen</h3>
         <textarea id="note" name="opmerkingen" placeholder="Kan ik mijn hond meenemen?" rows="4" cols="35"></textarea><br>
 
-        <input type="submit" id="submit" value="Submit">
+        <input type="submit" id="submit" value="Submit"><br><br>
 
       </form>
 
