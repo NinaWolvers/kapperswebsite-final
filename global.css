@@ -39,6 +39,13 @@ h4{
   font-family: "Covered by your grace";
 }
 
+h5{
+  font-size: 18px;
+  font-family: "Poppins";
+  color: var(--Paars);
+}
+
+
 p{
   font-size: 20px;
   font-family: "Poppins";

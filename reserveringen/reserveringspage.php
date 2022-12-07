@@ -127,8 +127,8 @@
         <p>2. Kies een moment</p>
           <label for="afspraakdatum"><h3>Datum afspraak</h3></label>
           <input type="date" id="afspraakdatum" name="afspraakdatum"
-          value="2022-11-01"
-          min="2022-11-01" max="2024-11-011" required><br><br>
+          value=" <?php echo date('Y-m-d');?> "
+          min="<?php echo date('Y-m-d');?>" max="2024-11-011" required/><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
         <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required>
@@ -137,19 +137,19 @@
         <label class="labelforbutton" for="tijd2">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
-        <h3>Naam</h3>
+        <h5>Naam</h5>
         <label for="fname"><i class="fa fa-user"></i></label>
         <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
 
-        <h3>Email</h3>
+        <h5>Email</h5>
         <label for="email"><i class="fa fa-envelope"></i></label>
         <input type="text" id="email" name="email" placeholder="john@example.com" required>
 
-        <h3>Telefoon nummer</h3>
+        <h5>Telefoon nummer</h5>
         <label for="phone"> <i class="fa-solid fa-phone"></i></label>
         <input type="text" id="phone" name="address" placeholder="06 12345678" required>
 
-        <h3>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h3>
+        <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
           <input type="radio" id="viamail" name="keuzereminder" value="viamail">
           <label class="labelforbutton" for="viamail">Ja, via mail</label><br>
           <input type="radio" id="viasms" name="keuzereminder" value="viasms">
@@ -157,7 +157,7 @@
         <input type="radio" id="nee" name="keuzereminder" value="nee">
         <label class="labelforbutton" for="nee">Nee, bedankt</label><br><br>
 
-        <h3>Opmerkingen</h3>
+        <h5>Opmerkingen</h5>
         <textarea id="note" name="opmerkingen" placeholder="Kan ik mijn hond meenemen?" rows="4" cols="35"></textarea><br>
 
         <input type="submit" id="submit" value="Submit"><br><br>
