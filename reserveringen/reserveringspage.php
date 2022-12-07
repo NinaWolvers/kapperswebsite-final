@@ -36,34 +36,34 @@
 <div>  
       <form action="/action_page.php">
         <p>1. Kies je behandeling</p>
-        <h3>Dames</h3>
-        <input type="radio" id="puntjesbijwerkendames" name="keuzebehandeling" value="puntjesbijwerkendames"
+        <h3>Behandeling</h3>
+        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken"
         checked="checked"required>
-        <label class="labelforbutton" for="puntjesbijwerkendames">
-          <div>Puntjes bijwerken</div>
+        <label class="labelforbutton" for="puntjesbijwerken">
+          <div>Puntjes knippen</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="korthaardames" name="keuzebehandeling" value="korthaardames">
-        <label class="labelforbutton" for="korthaardames">
+        <input type="radio" id="korthaar" name="keuzebehandeling" value="korthaar">
+        <label class="labelforbutton" for="korthaar">
           <div>Kort haar</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>15 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="middenlanghaardames" name="keuzebehandeling" value="middenlanghaardames">
-        <label class="labelforbutton" for="middenlanghaardames">
+        <input type="radio" id="middenlanghaar" name="keuzebehandeling" value="middenlanghaar">
+        <label class="labelforbutton" for="middenlanghaar">
           <div>Haar tot schouders</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>20 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="langhaardames" name="keuzebehandeling" value="langhaardames">
-        <label class="labelforbutton" for="langhaardames">
+        <input type="radio" id="langhaar" name="keuzebehandeling" value="langhaar">
+        <label class="labelforbutton" for="langhaar">
           <div>Lang haar</div>
           <div class="infoforbutton">
             <div>30 min</div>
@@ -71,39 +71,16 @@
           </div>
         </label><br>  
 
-        <h3>Heren</h3>
-        <input type="radio" id="korthaarheren" name="keuzebehandeling" value="korthaarheren">
-        <label class="labelforbutton" for="korthaarheren">
-          <div>Kort haar</div>
+     
+        <input type="radio" id="baard" name="keuzebehandelingbaard" value="baard">
+        <label class="labelforbutton" for="baard">
+          <div>Baard</div>
           <div class="infoforbutton">
-            <div>30 min</div>
+            <div>10? min</div>
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="langhaarheren" name="keuzebehandeling" value="langhaarheren">
-        <label class="labelforbutton" for="langhaarheren">
-          <div>Lang haar</div>
-          <div class="infoforbutton">
-            <div>30 min</div>
-            <div>".." eur</div>
-          </div>
-        </label><br>
-        <input type="radio" id="korthaartrimheren" name="keuzebehandeling" value="korthaartrimheren">
-        <label class="labelforbutton" for="korthaartrimheren">
-          <div>Kort haar & baard</div>
-          <div class="infoforbutton">
-            <div>30 min</div>
-            <div>20 eur</div>
-          </div>
-        </label><br>
-        <input type="radio" id="langhaartrimheren" name="keuzebehandeling" value="langhaartrimheren">
-        <label class="labelforbutton" for="langhaartrimheren">
-          <div>Lang haar & baard</div>
-          <div class="infoforbutton">
-            <div>30 min</div>
-            <div>".." eur</div>
-          </div>
-        </label><br>  
+
       
         <h3>Finish</h3>
         <input type="radio" id="wassen" name="keuzefinish" value="wassen" required>
