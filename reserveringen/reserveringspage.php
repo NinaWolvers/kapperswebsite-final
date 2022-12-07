@@ -132,9 +132,9 @@
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
         <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required>
-        <label class="labelforbutton" for="tijd1">Van 8:00-8:30</label><br>
+        <label class="labelforbuttonshort" for="tijd1">Van 8:00-8:30</label><br>
         <input type="radio" id="tijd2" name="keuzetijd" value="tijd2">
-        <label class="labelforbutton" for="tijd2">Van 8:30-9:00</label><br><br>
+        <label class="labelforbuttonshort" for="tijd2">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
         <h5>Naam</h5>
@@ -151,11 +151,11 @@
 
         <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
           <input type="radio" id="viamail" name="keuzereminder" value="viamail">
-          <label class="labelforbutton" for="viamail">Ja, via mail</label><br>
+          <label class="labelforbuttonshort" for="viamail">Ja, via mail</label><br>
           <input type="radio" id="viasms" name="keuzereminder" value="viasms">
-          <label class="labelforbutton" for="viasms">Ja, via SMS</label><br>
+          <label class="labelforbuttonshort" for="viasms">Ja, via SMS</label><br>
         <input type="radio" id="nee" name="keuzereminder" value="nee">
-        <label class="labelforbutton" for="nee">Nee, bedankt</label><br><br>
+        <label class="labelforbuttonshort" for="nee">Nee, bedankt</label><br><br>
 
         <h5>Opmerkingen</h5>
         <textarea id="note" name="opmerkingen" placeholder="Kan ik mijn hond meenemen?" rows="4" cols="35"></textarea><br>

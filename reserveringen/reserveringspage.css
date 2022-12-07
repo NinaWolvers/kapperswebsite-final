@@ -56,6 +56,16 @@ label{
   justify-content:space-between;
 }
 
+.labelforbuttonshort{
+  border: 2px solid var(--Lichtgrijs);
+  border-radius: 5px;
+  padding: 8px 16px;
+  display:flex;
+  justify-content:space-between;
+  width: fit-content;
+}
+
+
 .infoforbutton{
 display: grid;
 grid-template-columns: repeat(2, 1fr);
