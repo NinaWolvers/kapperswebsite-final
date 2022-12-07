@@ -22,8 +22,8 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Modellen</a></li>
-        <li><a href="/contact/contact.html">Contact</a></li>
-        <a href="/reserveringen/reserveringspage.html"><li><button>Afspraak maken</button></li></a>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <a href="../reserveringen/reserveringspage.php"><li><button>Afspraak maken</button></li></a>
         <i class="fa-solid fa-bars fa-2x"></i>
       </ul>
 
