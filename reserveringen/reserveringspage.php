@@ -32,9 +32,10 @@
 
   <div class="reserveringspage">
 
-    <div id="wrapper">
+   
 <div>  
-      <form action="./get.php" method="get">
+   <div id="wrapper">
+      <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
         <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken"
@@ -147,13 +148,18 @@
         <input type="submit" id="submit" value="Submit"><br><br>
 
       </form>
-</div>    
-<div>
-  
-</div>      
+</div>   
 
-    </div>
-  </div>
+ 
+
+ </div>
+ 
+ <div>
+
+</div>   
+
+
+</div>
 
 </body>
 </html>
