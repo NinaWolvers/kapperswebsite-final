@@ -34,7 +34,7 @@
 
     <div id="wrapper">
 <div>  
-      <form action="/action_page.php">
+      <form action="./get.php" method="get">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
         <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken"
@@ -72,12 +72,19 @@
         </label><br>  
 
      
-        <input type="radio" id="baard" name="keuzebehandelingbaard" value="baard">
+        <h3>Overig</h3>
+        <input type="radio" id="baard" name="keuzebehandelingoverig" value="baard">
         <label class="labelforbutton" for="baard">
-          <div>Baard</div>
+          <div>Baard trimmen</div>
           <div class="infoforbutton">
             <div>10? min</div>
             <div>10 eur</div>
+          </div>
+        </label><br>
+        <input type="radio" id="geen" name="keuzebehandelingoverig" value="geen">
+        <label class="labelforbutton" for="geen">
+          <div>Geen</div>
+          <div class="infoforbutton">
           </div>
         </label><br>
 
@@ -146,7 +153,7 @@
 </div>      
 
     </div>
-  </div>  
+  </div>
 
 </body>
 </html>
