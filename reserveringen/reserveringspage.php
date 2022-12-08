@@ -38,8 +38,7 @@
       <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
-        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken"
-        checked="checked"required onclick="myFunction()">
+        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken" required onclick="myFunction()">
         <label class="labelforbutton" for="puntjesbijwerken">
           <div>Puntjes knippen</div>
           <div class="infoforbutton">
@@ -99,12 +98,34 @@
             <div>10 eur</div>
           </div>
         </label><br>
+
+
+        <input type="radio" id="fohn" name="keuzefinish" value="fohn" required onclick="myFunction()">
+        <label class="labelforbutton" for="fohn">
+          <div>Föhnen</div>
+          <div class="infoforbutton">
+            <div>15 min</div>
+            <div>10 eur</div>
+          </div>
+        </label><br>
+
+
+
         <input type="radio" id="wassenfohn" name="keuzefinish" value="wassenfohn" onclick="myFunction()">
         <label class="labelforbutton" for="wassenfohn">
           <div>Wassen en föhnen</div>
           <div class="infoforbutton">
             <div>15 min</div>
             <div>20 eur</div>
+          </div>
+        </label><br>
+
+        <input type="radio" id="geen2" name="keuzefinish" value="geen2" required onclick="myFunction()">
+        <label class="labelforbutton" for="geen2">
+          <div>Geen</div>
+          <div class="infoforbutton">
+            <div></div>
+            <div></div>
           </div>
         </label><br><br>
         
@@ -116,7 +137,7 @@
           min="<?php echo date('Y-m-d');?>" max="2024-11-011" required/><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
-        <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required  onclick="myFunction()">
+        <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required onclick="myFunction()">
         <label class="labelforbuttonshort" for="tijd1">Van 8:00-8:30</label><br>
         <input type="radio" id="tijd2" name="keuzetijd" value="tijd2"  onclick="myFunction()">
         <label class="labelforbuttonshort" for="tijd2">Van 8:30-9:00</label><br><br>
@@ -135,17 +156,17 @@
         <input type="text" id="phone" name="address" placeholder="06 12345678" required>
 
         <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
-          <input type="radio" id="viamail" name="keuzereminder" value="viamail">
+          <input type="radio" id="viamail" name="keuzereminder" value="viamail" onclick="myFunction()">
           <label class="labelforbuttonshort" for="viamail">Ja, via mail</label><br>
-          <input type="radio" id="viasms" name="keuzereminder" value="viasms">
+          <input type="radio" id="viasms" name="keuzereminder" value="viasms" onclick="myFunction()">
           <label class="labelforbuttonshort" for="viasms">Ja, via SMS</label><br>
-        <input type="radio" id="nee" name="keuzereminder" value="nee">
+        <input type="radio" id="nee" name="keuzereminder" value="nee" onclick="myFunction()">
         <label class="labelforbuttonshort" for="nee">Nee, bedankt</label><br><br>
 
         <h5>Opmerkingen</h5>
         <textarea id="note" name="opmerkingen" placeholder="Kan ik mijn hond meenemen?" rows="4" cols="35"></textarea><br>
 
-        <input type="submit" id="submit" value="Submit"><br><br>
+        <input type="submit" id="submit" value="Bevestigen"><br><br>
 
       </form>
 </div>   
@@ -155,7 +176,8 @@
  </div>
  
  <div class="overview">
- <h3>Mijn afspraak</h3>
+  <div class="firstbox">
+ <p style="font-size: 30px">Mijn afspraak</p>
  <h3>Behandeling</h3>
   <p id="pb" style="display: none;">Puntjes knippen</p>
   <p id="kh" style="display: none;">Kort haar</p>
@@ -166,11 +188,26 @@
   <p id="ge" style="display: none;">Geen</p>
   <h3>Finish</h3>
   <p id="wa" style="display: none;">Wassen</p>
+  <p id="fo" style="display: none;">Föhnen</p>
   <p id="wf" style="display: none;">Wassen en föhnen</p>
-  <h3>Datum</h3>
+  <p id="ge2" style="display: none;">Geen</p>
+  <h3>Reminder</h3>
+  <p id="ma" style="display: none;">Via mail</p>
+  <p id="sm" style="display: none;">Via SMS</p>
+  <p id="ne" style="display: none;">Nee</p>
+</div>
+
+
+<div class="secondbox">
+
+  <p><i class="fa-solid fa-calendar"></i></p>
   <p id="output"></p>
   <p id="ti1" style="display: none;">8:00-8:30</p>
   <p id="ti2" style="display: none;">8:30-9:00</p>
+
+</div>
+</div>
+  
   
 
 
@@ -240,10 +277,22 @@
     document.getElementById("wa").style.display = "none";
   }
 
+  if (document.getElementById("fohn").checked == true){
+    document.getElementById("fo").style.display = "block";
+  } else {
+    document.getElementById("fo").style.display = "none";
+  }
+
   if (document.getElementById("wassenfohn").checked == true){
     document.getElementById("wf").style.display = "block";
   } else {
     document.getElementById("wf").style.display = "none";
+  }
+
+  if (document.getElementById("geen2").checked == true){
+    document.getElementById("ge2").style.display = "block";
+  } else {
+    document.getElementById("ge2").style.display = "none";
   }
 
 
@@ -259,6 +308,27 @@
     document.getElementById("ti2").style.display = "block";
   } else {
     document.getElementById("ti2").style.display = "none";
+  }
+
+
+  // reminder afspraak
+
+  if (document.getElementById("viamail").checked == true){
+    document.getElementById("ma").style.display = "block";
+  } else {
+    document.getElementById("ma").style.display = "none";
+  }
+
+  if (document.getElementById("viasms").checked == true){
+    document.getElementById("sm").style.display = "block";
+  } else {
+    document.getElementById("sm").style.display = "none";
+  }
+
+  if (document.getElementById("nee").checked == true){
+    document.getElementById("ne").style.display = "block";
+  } else {
+    document.getElementById("ne").style.display = "none";
   }
 
 
