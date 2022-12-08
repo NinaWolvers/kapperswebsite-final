@@ -78,9 +78,24 @@ input[type="radio"]:checked + label{
   border: 2px solid var(--Paars);
 }
 
+.overview{
+  position: fixed;
+  top: 100px;
+  left: 55vw;
+  border: 2px solid var(--Lichtgrijs);
+  border-radius: 10px;
+  width: 30vw;
+  min-height: 40vw;
+  padding: 16px;
+}
+
 @media (max-width: 999px){
   .reserveringspage{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    }
+
+    .overview{
+      display: none;
     }
 }
