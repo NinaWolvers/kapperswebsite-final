@@ -5,6 +5,19 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 #submit{
+  background-color: #FFA500;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: var(--Wit);
+  font-family: Poppins;
+  font-size: 20px;
+  width:fit-content;
+  height: fit-content;
+  transition: .3s;
+}
+
+#buttondatum{
   background-color: var(--Paars);
   border: none;
   border-radius: 10px;
@@ -14,6 +27,13 @@ grid-template-columns: repeat(2, 1fr);
   font-size: 20px;
   width:fit-content;
   height: fit-content;
+  transition: .3s;
+}
+
+/* hoveranimaties */
+
+#buttondatum:hover, #submit:hover{
+  opacity: .5;
   transition: .3s;
 }
 

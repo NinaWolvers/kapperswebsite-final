@@ -135,6 +135,7 @@
           <input type="date" id="afspraakdatum" name="afspraakdatum"
           value=" <?php echo date('Y-m-d');?> "
           min="<?php echo date('Y-m-d');?>" max="2024-11-011" required/><br><br>
+          <input type="button" id="buttondatum" value="vind beschikbare tijden"><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
         <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required onclick="myFunction()">
