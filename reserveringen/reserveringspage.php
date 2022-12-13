@@ -73,7 +73,7 @@
 
      
         <h3>Overig</h3>
-        <input type="radio" id="baard" name="keuzebehandelingoverig" value="10" onclick="myFunction(); calc();">
+        <input type="radio" id="baard" name="keuzebehandelingoverig" value="10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="baard">
           <div>Baard trimmen</div>
           <div class="infoforbutton">
@@ -138,9 +138,9 @@
           <input type="button" id="buttondatum" value="vind beschikbare tijden"><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
-        <input type="radio" id="tijd1" name="keuzetijd" value="tijd1" required onclick="myFunction()">
+        <input type="radio" id="tijd1" name="keuzetijd" value="0" required onclick="myFunction()">
         <label class="labelforbuttonshort" for="tijd1">Van 8:00-8:30</label><br>
-        <input type="radio" id="tijd2" name="keuzetijd" value="tijd2"  onclick="myFunction()">
+        <input type="radio" id="tijd2" name="keuzetijd" value="0"  onclick="myFunction()">
         <label class="labelforbuttonshort" for="tijd2">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
@@ -157,11 +157,11 @@
         <input type="text" id="phone" name="address" placeholder="06 12345678" required>
 
         <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
-          <input type="radio" id="viamail" name="keuzereminder" value="viamail" onclick="myFunction()">
+          <input type="radio" id="viamail" name="keuzereminder" value="0" onclick="myFunction()">
           <label class="labelforbuttonshort" for="viamail">Ja, via mail</label><br>
-          <input type="radio" id="viasms" name="keuzereminder" value="viasms" onclick="myFunction()">
+          <input type="radio" id="viasms" name="keuzereminder" value="0" onclick="myFunction()">
           <label class="labelforbuttonshort" for="viasms">Ja, via SMS</label><br>
-        <input type="radio" id="nee" name="keuzereminder" value="nee" onclick="myFunction()">
+        <input type="radio" id="nee" name="keuzereminder" value="0" onclick="myFunction()">
         <label class="labelforbuttonshort" for="nee">Nee, bedankt</label><br><br>
 
         <h5>Opmerkingen</h5>
