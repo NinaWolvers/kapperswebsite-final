@@ -38,7 +38,7 @@
       <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
-        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="puntjesbijwerken" required onclick="myFunction()">
+        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="puntjesbijwerken">
           <div>Puntjes knippen</div>
           <div class="infoforbutton">
@@ -46,7 +46,7 @@
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="korthaar" name="keuzebehandeling" value="korthaar" onclick="myFunction()">
+        <input type="radio" id="korthaar" name="keuzebehandeling" value="15" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="korthaar">
           <div>Kort haar</div>
           <div class="infoforbutton">
@@ -54,7 +54,7 @@
             <div>15 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="middenlanghaar" name="keuzebehandeling" value="middenlanghaar" onclick="myFunction()">
+        <input type="radio" id="middenlanghaar" name="keuzebehandeling" value="20" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="middenlanghaar">
           <div>Haar tot schouders</div>
           <div class="infoforbutton">
@@ -62,7 +62,7 @@
             <div>20 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="langhaar" name="keuzebehandeling" value="langhaar" onclick="myFunction()">
+        <input type="radio" id="langhaar" name="keuzebehandeling" value="25" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="langhaar">
           <div>Lang haar</div>
           <div class="infoforbutton">
@@ -73,7 +73,7 @@
 
      
         <h3>Overig</h3>
-        <input type="radio" id="baard" name="keuzebehandelingoverig" value="baard" onclick="myFunction()">
+        <input type="radio" id="baard" name="keuzebehandelingoverig" value="10" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="baard">
           <div>Baard trimmen</div>
           <div class="infoforbutton">
@@ -81,7 +81,7 @@
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="geen" name="keuzebehandelingoverig" value="geen" onclick="myFunction()">
+        <input type="radio" id="geen" name="keuzebehandelingoverig" value="0" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="geen">
           <div>Geen</div>
           <div class="infoforbutton">
@@ -90,7 +90,7 @@
 
       
         <h3>Finish</h3>
-        <input type="radio" id="wassen" name="keuzefinish" value="wassen" required onclick="myFunction()">
+        <input type="radio" id="wassen" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassen">
           <div>Wassen</div>
           <div class="infoforbutton">
@@ -100,7 +100,7 @@
         </label><br>
 
 
-        <input type="radio" id="fohn" name="keuzefinish" value="fohn" required onclick="myFunction()">
+        <input type="radio" id="fohn" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="fohn">
           <div>Föhnen</div>
           <div class="infoforbutton">
@@ -111,7 +111,7 @@
 
 
 
-        <input type="radio" id="wassenfohn" name="keuzefinish" value="wassenfohn" onclick="myFunction()">
+        <input type="radio" id="wassenfohn" name="keuzefinish" value="20" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassenfohn">
           <div>Wassen en föhnen</div>
           <div class="infoforbutton">
@@ -120,7 +120,7 @@
           </div>
         </label><br>
 
-        <input type="radio" id="geen2" name="keuzefinish" value="geen2" required onclick="myFunction()">
+        <input type="radio" id="geen2" name="keuzefinish" value="0" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="geen2">
           <div>Geen</div>
           <div class="infoforbutton">
@@ -196,6 +196,8 @@
   <p id="ma" style="display: none;">Via mail</p>
   <p id="sm" style="display: none;">Via SMS</p>
   <p id="ne" style="display: none;">Nee</p>
+  <h3>Totaalprijs</h3>
+  <p id="total"></p>
 </div>
 
 
@@ -332,8 +334,30 @@
     document.getElementById("ne").style.display = "none";
   }
 
-
 }
+
+
+  // calculate totaal
+  function calc(){
+    let totaal=0;
+
+    var rates = document.getElementsByTagName("input");
+    var rate_value=0;
+    for(var i = 0; i < rates.length; i++){
+        if(rates[i].checked){
+            rate_value = rates[i].value;
+            console.log(rate_value);
+            
+             totaal+=parseInt(rate_value);
+
+        }
+        
+    }
+    
+
+    document.getElementById("total").innerHTML = totaal;
+  }
+
 </script>';
 ?>
 
