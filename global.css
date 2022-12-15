@@ -1,5 +1,5 @@
 #wrapper{
-width: 80%;
+width: 90%;
 margin-left: auto;
 margin-right: auto;
 }
@@ -19,13 +19,14 @@ body {
 }
 
 h1{
-  font-size: 100px;
+  font-size: 90px;
   font-family: "Comfortaa";
 }
 
 h2{
-  font-size: 80px;
+  font-size: 60px;
   font-family: "Comfortaa";
+  color: var(--Paars);
 }
 
 h3{
@@ -37,6 +38,7 @@ h3{
 h4{
   font-size: 30px;
   font-family: "Covered by your grace";
+
 }
 
 h5{
