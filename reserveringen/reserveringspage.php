@@ -20,7 +20,7 @@
     <div id="wrapper">
   
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="../home/home.html">Home</a></li>
         <li><a href="#">Modellen</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
         <a href="../reserveringen/reserveringspage.php"><li><button>Afspraak maken</button></li></a>
@@ -30,40 +30,42 @@
     </div>
 </div>
 
+
+ <div id="wrapper">
   <div class="reserveringspage">
 
    
 <div>  
-   <div id="wrapper">
+  
       <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
-        <input type="radio" id="puntjesbijwerken" name="keuzebehandeling" value="10" required onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="puntjesbijwerken">
+        <input type="radio" id="puntjes knippen" name="keuzebehandeling" value="10" required onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="puntjes knippen">
           <div>Puntjes knippen</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="korthaar" name="keuzebehandeling" value="15" onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="korthaar">
+        <input type="radio" id="kort haar" name="keuzebehandeling" value="15" onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="kort haar">
           <div>Kort haar</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>15 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="middenlanghaar" name="keuzebehandeling" value="20" onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="middenlanghaar">
+        <input type="radio" id="haar tot schouders" name="keuzebehandeling" value="20" onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="haar tot schouders">
           <div>Haar tot schouders</div>
           <div class="infoforbutton">
             <div>30 min</div>
             <div>20 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="langhaar" name="keuzebehandeling" value="25" onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="langhaar">
+        <input type="radio" id="lang haar" name="keuzebehandeling" value="25" onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="lang haar">
           <div>Lang haar</div>
           <div class="infoforbutton">
             <div>30 min</div>
@@ -73,8 +75,8 @@
 
      
         <h3>Overig</h3>
-        <input type="radio" id="baard" name="keuzebehandelingoverig" value="10" required onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="baard">
+        <input type="radio" id="baard trimmen" name="keuzebehandelingoverig" value="10" required onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="baard trimmen">
           <div>Baard trimmen</div>
           <div class="infoforbutton">
             <div>10? min</div>
@@ -100,8 +102,8 @@
         </label><br>
 
 
-        <input type="radio" id="fohn" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="fohn">
+        <input type="radio" id="föhnen" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="föhnen">
           <div>Föhnen</div>
           <div class="infoforbutton">
             <div>15 min</div>
@@ -111,8 +113,8 @@
 
 
 
-        <input type="radio" id="wassenfohn" name="keuzefinish" value="20" onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="wassenfohn">
+        <input type="radio" id="wassen en föhnen" name="keuzefinish" value="20" onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="wassen en föhnen">
           <div>Wassen en föhnen</div>
           <div class="infoforbutton">
             <div>15 min</div>
@@ -120,8 +122,8 @@
           </div>
         </label><br>
 
-        <input type="radio" id="geen2" name="keuzefinish" value="0" required onclick="myFunction(); calc();">
-        <label class="labelforbutton" for="geen2">
+        <input type="radio" id="geen " name="keuzefinish" value="0" required onclick="myFunction(); calc();">
+        <label class="labelforbutton" for="geen ">
           <div>Geen</div>
           <div class="infoforbutton">
             <div></div>
@@ -135,7 +137,7 @@
           <input type="date" id="afspraakdatum" name="afspraakdatum"
           value=" <?php echo date('Y-m-d');?> "
           min="<?php echo date('Y-m-d');?>" max="2024-11-011" required/><br><br>
-          <input type="button" id="buttondatum" value="vind beschikbare tijden"><br><br>
+          <input type="button" id="buttondatum" value="Vind beschikbare tijden"><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
         <input type="radio" id="8:00-8:30" name="keuzetijd" value="0" required onclick="myFunction()">
@@ -157,10 +159,10 @@
         <input type="text" id="phone" name="address" placeholder="06 12345678" required>
 
         <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
-          <input type="radio" id="viamail" name="keuzereminder" value="0" onclick="myFunction()">
-          <label class="labelforbuttonshort" for="viamail">Ja, via mail</label><br>
-          <input type="radio" id="viasms" name="keuzereminder" value="0" onclick="myFunction()">
-          <label class="labelforbuttonshort" for="viasms">Ja, via SMS</label><br>
+          <input type="radio" id="via mail" name="keuzereminder" value="0" onclick="myFunction()">
+          <label class="labelforbuttonshort" for="via mail">Ja, via mail</label><br>
+          <input type="radio" id="via sms" name="keuzereminder" value="0" onclick="myFunction()">
+          <label class="labelforbuttonshort" for="via sms">Ja, via SMS</label><br>
         <input type="radio" id="nee" name="keuzereminder" value="0" onclick="myFunction()">
         <label class="labelforbuttonshort" for="nee">Nee, bedankt</label><br><br>
 
