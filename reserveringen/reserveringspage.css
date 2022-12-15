@@ -102,7 +102,7 @@ input[type="radio"]:checked + label{
 .overview{
   position: fixed;
   top: 120px;
-  left: 55vw;
+  left: 60vw;
 }
 
 .firstbox{

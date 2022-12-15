@@ -41,13 +41,16 @@ span {
 
 
 .foto1 {
-  width: 40vw;
-  height: 90%;
+  width: 90%;
+  height: 80%;
   object-fit: cover;
 }
 
+
+
 .grid-container1 {
   /* padding-left: 70px; */
+  padding: 40px;
 }
 
 .grid-container2 {
@@ -201,13 +204,38 @@ footer p {
 }
 
 
-/* responsive */
-@media (max-width: 800px){
+/* responsive boxes en beginscherm*/
+
+@media (max-width: 1500px){
+  .boxen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  }  
+
+  @media (max-width: 1200px){
+    .boxen {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    }  
+@media (max-width: 1000px){
   .pagina1 {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
+  }
+  h1{
+    font-size: 10px;
+  }
+
   }  
+
+
+/* responsive rest vd page */
+@media (max-width: 800px){
 
   .pagina2 {
     display: grid;
@@ -221,7 +249,7 @@ footer p {
 
   }
   .foto1 {
-    width: 100%;
+    width: 90%;
   }
 
   .foto2 {
@@ -234,9 +262,10 @@ footer p {
 
   .container3, .container4{
     width: 90%;
+    justify-content: center;
   }
 
- /* align center */
+
  .grid-container1{
   display: flex;
   flex-direction: column;
