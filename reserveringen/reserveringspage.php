@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="reserveringspage.css">
+  <link rel="stylesheet" href="../reserveringen/reserveringspage.css">
   <link rel="stylesheet" href="../header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,10 +138,10 @@
           <input type="button" id="buttondatum" value="vind beschikbare tijden"><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
-        <input type="radio" id="tijd1" name="keuzetijd" value="0" required onclick="myFunction()">
-        <label class="labelforbuttonshort" for="tijd1">Van 8:00-8:30</label><br>
-        <input type="radio" id="tijd2" name="keuzetijd" value="0"  onclick="myFunction()">
-        <label class="labelforbuttonshort" for="tijd2">Van 8:30-9:00</label><br><br>
+        <input type="radio" id="8:00-8:30" name="keuzetijd" value="0" required onclick="myFunction()">
+        <label class="labelforbuttonshort" for="8:00-8:30">Van 8:00-8:30</label><br>
+        <input type="radio" id="8:30-9:00" name="keuzetijd" value="0"  onclick="myFunction()">
+        <label class="labelforbuttonshort" for="8:30-9:00">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
         <h5>Naam</h5>
@@ -180,22 +180,13 @@
   <div class="firstbox">
  <p style="font-size: 30px">Mijn afspraak</p>
  <h3>Behandeling</h3>
-  <p id="pb" style="display: none;">Puntjes knippen</p>
-  <p id="kh" style="display: none;">Kort haar</p>
-  <p id="hs" style="display: none;">Haar tot schouders</p>
-  <p id="lh" style="display: none;">Lang haar</p>
+  <p id="kb"></p>
   <h3>Overig</h3>
-  <p id="bt" style="display: none;">Baard trimmen</p>
-  <p id="ge" style="display: none;">Geen</p>
+  <p id="ov"></p>
   <h3>Finish</h3>
-  <p id="wa" style="display: none;">Wassen</p>
-  <p id="fo" style="display: none;">Föhnen</p>
-  <p id="wf" style="display: none;">Wassen en föhnen</p>
-  <p id="ge2" style="display: none;">Geen</p>
+  <p id="fi"></p>
   <h3>Reminder</h3>
-  <p id="ma" style="display: none;">Via mail</p>
-  <p id="sm" style="display: none;">Via SMS</p>
-  <p id="ne" style="display: none;">Nee</p>
+  <p id="re"></p>
   <h3>Totaalprijs</h3>
   <p id="total"></p>
 </div>
@@ -205,9 +196,8 @@
 
   <p><i class="fa-solid fa-calendar"></i></p>
   <p id="output"></p>
-  <p id="ti1" style="display: none;">8:00-8:30</p>
-  <p id="ti2" style="display: none;">8:30-9:00</p>
-
+  <p id="ti"></p>
+ 
 </div>
 </div>
   
@@ -237,104 +227,44 @@
 
 
    function myFunction() {
+
+          var keuzeb = document.getElementsByName("keuzebehandeling");
+          var over = document.getElementsByName("keuzebehandelingoverig");
+          var fin = document.getElementsByName("keuzefinish");
+          var rem = document.getElementsByName("keuzereminder");
+          var tijd = document.getElementsByName("keuzetijd");
+
+            for (var opt of keuzeb){
+              if (opt.checked){
+                document.getElementById("kb").innerHTML = opt.id;
+              }
+            }
+
+            for (var opt of over){
+              if (opt.checked){
+                document.getElementById("ov").innerHTML = opt.id;
+              }
+            }
+
+            for (var opt of fin){
+              if (opt.checked){
+                document.getElementById("fi").innerHTML = opt.id;
+              }
+            }
+
+            for (var opt of rem){
+              if (opt.checked){
+                document.getElementById("re").innerHTML = opt.id;
+              }
+            }
+
+            for (var opt of tijd){
+              if (opt.checked){
+                document.getElementById("ti").innerHTML = opt.id;
+              }
+            }
   
-  if (document.getElementById("puntjesbijwerken").checked == true){
-    document.getElementById("pb").style.display = "block";
-  } else {
-    document.getElementById("pb").style.display = "none";
-  }
-
-  if (document.getElementById("korthaar").checked == true){
-    document.getElementById("kh").style.display = "block";
-  } else {
-    document.getElementById("kh").style.display = "none";
-  }
-
-  if (document.getElementById("middenlanghaar").checked == true){
-    document.getElementById("hs").style.display = "block";
-  } else {
-    document.getElementById("hs").style.display = "none";
-  }
-
-  if (document.getElementById("langhaar").checked == true){
-    document.getElementById("lh").style.display = "block";
-  } else {
-    document.getElementById("lh").style.display = "none";
-  }
-
-  if (document.getElementById("baard").checked == true){
-    document.getElementById("bt").style.display = "block";
-  } else {
-    document.getElementById("bt").style.display = "none";
-  }
-
-  if (document.getElementById("geen").checked == true){
-    document.getElementById("ge").style.display = "block";
-  } else {
-    document.getElementById("ge").style.display = "none";
-  }
-
-  if (document.getElementById("wassen").checked == true){
-    document.getElementById("wa").style.display = "block";
-  } else {
-    document.getElementById("wa").style.display = "none";
-  }
-
-  if (document.getElementById("fohn").checked == true){
-    document.getElementById("fo").style.display = "block";
-  } else {
-    document.getElementById("fo").style.display = "none";
-  }
-
-  if (document.getElementById("wassenfohn").checked == true){
-    document.getElementById("wf").style.display = "block";
-  } else {
-    document.getElementById("wf").style.display = "none";
-  }
-
-  if (document.getElementById("geen2").checked == true){
-    document.getElementById("ge2").style.display = "block";
-  } else {
-    document.getElementById("ge2").style.display = "none";
-  }
-
-
-  // tijdsloten
-
-  if (document.getElementById("tijd1").checked == true){
-    document.getElementById("ti1").style.display = "block";
-  } else {
-    document.getElementById("ti1").style.display = "none";
-  }
-
-  if (document.getElementById("tijd2").checked == true){
-    document.getElementById("ti2").style.display = "block";
-  } else {
-    document.getElementById("ti2").style.display = "none";
-  }
-
-
-  // reminder afspraak
-
-  if (document.getElementById("viamail").checked == true){
-    document.getElementById("ma").style.display = "block";
-  } else {
-    document.getElementById("ma").style.display = "none";
-  }
-
-  if (document.getElementById("viasms").checked == true){
-    document.getElementById("sm").style.display = "block";
-  } else {
-    document.getElementById("sm").style.display = "none";
-  }
-
-  if (document.getElementById("nee").checked == true){
-    document.getElementById("ne").style.display = "block";
-  } else {
-    document.getElementById("ne").style.display = "none";
-  }
-
-}
+          }
 
 
   // calculate totaal
