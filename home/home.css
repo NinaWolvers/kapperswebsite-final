@@ -20,7 +20,7 @@ h4 {
 .pagina1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 100px;
+  margin-top: 90px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;

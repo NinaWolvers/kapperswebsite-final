@@ -2,6 +2,7 @@
 margin-top: 100px;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
+padding: 40px;
 }
 
 #submit{

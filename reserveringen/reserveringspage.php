@@ -287,7 +287,7 @@
     }
     
 
-    document.getElementById("total").innerHTML = totaal;
+    document.getElementById("total").innerHTML = totaal+ " eur";
   }
 
 </script>';

@@ -1,5 +1,5 @@
 .Contact{
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .contactcontainer{
@@ -11,6 +11,7 @@ grid-template-columns: auto auto;
  display: flex;
  flex-direction: column;
  row-gap: 10px;
+ padding: 40px;
 
 }
 
