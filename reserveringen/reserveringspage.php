@@ -40,7 +40,7 @@
       <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
-        <input type="radio" id="puntjes knippen" name="keuzebehandeling" value="10" required onclick="myFunction(); calc();">
+        <input type="radio" id="puntjes knippen" name="keuzebehandeling" value="Puntjes knippen,30,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="puntjes knippen">
           <div>Puntjes knippen</div>
           <div class="infoforbutton">
@@ -48,7 +48,7 @@
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="kort haar" name="keuzebehandeling" value="15" onclick="myFunction(); calc();">
+        <input type="radio" id="kort haar" name="keuzebehandeling" value="Kort haar,30,15" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="kort haar">
           <div>Kort haar</div>
           <div class="infoforbutton">
@@ -56,7 +56,7 @@
             <div>15 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="haar tot schouders" name="keuzebehandeling" value="20" onclick="myFunction(); calc();">
+        <input type="radio" id="haar tot schouders" name="keuzebehandeling" value="Haar tot schouders,30,20" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="haar tot schouders">
           <div>Haar tot schouders</div>
           <div class="infoforbutton">
@@ -64,7 +64,7 @@
             <div>20 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="lang haar" name="keuzebehandeling" value="25" onclick="myFunction(); calc();">
+        <input type="radio" id="lang haar" name="keuzebehandeling" value="Lang haar,30,25" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="lang haar">
           <div>Lang haar</div>
           <div class="infoforbutton">
@@ -75,15 +75,15 @@
 
      
         <h3>Overig</h3>
-        <input type="radio" id="baard trimmen" name="keuzebehandelingoverig" value="10" required onclick="myFunction(); calc();">
+        <input type="radio" id="baard trimmen" name="keuzebehandelingoverig" value="Baard trimmen,15,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="baard trimmen">
           <div>Baard trimmen</div>
           <div class="infoforbutton">
-            <div>10? min</div>
+            <div>15 min</div>
             <div>10 eur</div>
           </div>
         </label><br>
-        <input type="radio" id="geen" name="keuzebehandelingoverig" value="0" onclick="myFunction(); calc();">
+        <input type="radio" id="geen" name="keuzebehandelingoverig" value="Geen,0,0" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="geen">
           <div>Geen</div>
           <div class="infoforbutton">
@@ -92,7 +92,7 @@
 
       
         <h3>Finish</h3>
-        <input type="radio" id="wassen" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
+        <input type="radio" id="wassen" name="keuzefinish" value="Wassen,15,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassen">
           <div>Wassen</div>
           <div class="infoforbutton">
@@ -102,7 +102,7 @@
         </label><br>
 
 
-        <input type="radio" id="föhnen" name="keuzefinish" value="10" required onclick="myFunction(); calc();">
+        <input type="radio" id="föhnen" name="keuzefinish" value="Föhnen,15,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="föhnen">
           <div>Föhnen</div>
           <div class="infoforbutton">
@@ -113,7 +113,7 @@
 
 
 
-        <input type="radio" id="wassen en föhnen" name="keuzefinish" value="20" onclick="myFunction(); calc();">
+        <input type="radio" id="wassen en föhnen" name="keuzefinish" value="Wassen en föhnen,15,20" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassen en föhnen">
           <div>Wassen en föhnen</div>
           <div class="infoforbutton">
@@ -122,7 +122,7 @@
           </div>
         </label><br>
 
-        <input type="radio" id="geen " name="keuzefinish" value="0" required onclick="myFunction(); calc();">
+        <input type="radio" id="geen " name="keuzefinish" value="Geen,0,0" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="geen ">
           <div>Geen</div>
           <div class="infoforbutton">
@@ -140,9 +140,9 @@
           <input type="button" id="buttondatum" value="Vind beschikbare tijden"><br><br>
 
         <h3>Beschikbare tijden voor geselecteerde datum</h3>
-        <input type="radio" id="8:00-8:30" name="keuzetijd" value="0" required onclick="myFunction()">
+        <input type="radio" id="8:00-8:30" name="keuzetijd" value="8:00-8:30,0,0" required onclick="myFunction()">
         <label class="labelforbuttonshort" for="8:00-8:30">Van 8:00-8:30</label><br>
-        <input type="radio" id="8:30-9:00" name="keuzetijd" value="0"  onclick="myFunction()">
+        <input type="radio" id="8:30-9:00" name="keuzetijd" value="8:30-9:00,0,0"  onclick="myFunction()">
         <label class="labelforbuttonshort" for="8:30-9:00">Van 8:30-9:00</label><br><br>
 
         <p>3. Vul je gegevens in</p>
@@ -159,11 +159,11 @@
         <input type="text" id="phone" name="address" placeholder="06 12345678" required>
 
         <h5>Wil je graag 24 uur van tevoren een reminder ontvangen van de afspraak?</h5>
-          <input type="radio" id="via mail" name="keuzereminder" value="0" onclick="myFunction()">
+          <input type="radio" id="via mail" name="keuzereminder" value="Via mail,0,0" onclick="myFunction()">
           <label class="labelforbuttonshort" for="via mail">Ja, via mail</label><br>
-          <input type="radio" id="via sms" name="keuzereminder" value="0" onclick="myFunction()">
+          <input type="radio" id="via sms" name="keuzereminder" value="Via SMS,0,0" onclick="myFunction()">
           <label class="labelforbuttonshort" for="via sms">Ja, via SMS</label><br>
-        <input type="radio" id="nee" name="keuzereminder" value="0" onclick="myFunction()">
+        <input type="radio" id="nee" name="keuzereminder" value="Nee,0,0" onclick="myFunction()">
         <label class="labelforbuttonshort" for="nee">Nee, bedankt</label><br><br>
 
         <h5>Opmerkingen</h5>
@@ -189,7 +189,7 @@
   <p id="fi"></p>
   <h3>Reminder</h3>
   <p id="re"></p>
-  <h3>Totaalprijs</h3>
+  <h3>Totaal</h3>
   <p id="total"></p>
 </div>
 
@@ -235,34 +235,39 @@
           var fin = document.getElementsByName("keuzefinish");
           var rem = document.getElementsByName("keuzereminder");
           var tijd = document.getElementsByName("keuzetijd");
-
+          
             for (var opt of keuzeb){
               if (opt.checked){
-                document.getElementById("kb").innerHTML = opt.id;
+                let option = opt.value.split(",");
+                document.getElementById("kb").innerHTML = option[0];
               }
             }
 
             for (var opt of over){
               if (opt.checked){
-                document.getElementById("ov").innerHTML = opt.id;
+                let option = opt.value.split(",");
+                document.getElementById("ov").innerHTML = option[0];
               }
             }
 
             for (var opt of fin){
               if (opt.checked){
-                document.getElementById("fi").innerHTML = opt.id;
+                let option = opt.value.split(",");
+                document.getElementById("fi").innerHTML = option[0];
               }
             }
 
             for (var opt of rem){
               if (opt.checked){
-                document.getElementById("re").innerHTML = opt.id;
+                let option = opt.value.split(",");
+                document.getElementById("re").innerHTML = option[0];
               }
             }
 
             for (var opt of tijd){
               if (opt.checked){
-                document.getElementById("ti").innerHTML = opt.id;
+                let option = opt.value.split(",");
+                document.getElementById("ti").innerHTML = option[0];
               }
             }
   
@@ -271,23 +276,29 @@
 
   // calculate totaal
   function calc(){
-    let totaal=0;
+    let totaalprijs=0;
+    let totaaltijd=0;
 
     var rates = document.getElementsByTagName("input");
-    var rate_value=0;
+    var value_prijs=0;
+    var value_tijd=0;
     for(var i = 0; i < rates.length; i++){
         if(rates[i].checked){
-            rate_value = rates[i].value;
-            console.log(rate_value);
+          let option = rates[i].value.split(",");
+          value_prijs = option[2];
+          value_tijd = option[1];
+
+            // console.log(value_prijs);
             
-             totaal+=parseInt(rate_value);
+             totaalprijs+=parseInt(value_prijs);
+             totaaltijd+=parseInt(value_tijd);
 
         }
         
     }
     
 
-    document.getElementById("total").innerHTML = totaal+ " eur";
+    document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +totaaltijd +" minuten";
   }
 
 </script>';
