@@ -38,6 +38,10 @@ padding: 40px;
   transition: .3s;
 }
 
+.labelforbutton:hover{ 
+  border: 2px solid var(--Paars);
+}
+
 input[type="text"]{
   font-size: 20px;
   font-family: "Poppins";
