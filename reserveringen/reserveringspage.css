@@ -16,6 +16,7 @@ padding: 40px;
   width:fit-content;
   height: fit-content;
   transition: .3s;
+  cursor: pointer;
 }
 
 #buttondatum{
@@ -29,6 +30,22 @@ padding: 40px;
   width:fit-content;
   height: fit-content;
   transition: .3s;
+  cursor: pointer;
+}
+
+input#afspraakdatum{
+
+  background-color: #ba84ea;
+  Border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  font-family: poppins;
+  border-width: thin;
+  height: 45px;
+  border: 1px white;
+  padding-left: 38px;
+  padding-right: 10px;
+  color-scheme: dark;
 }
 
 /* hoveranimaties */
@@ -38,8 +55,10 @@ padding: 40px;
   transition: .3s;
 }
 
-.labelforbutton:hover{ 
+.labelforbutton:hover, .labelforbuttonshort:hover{ 
   border: 2px solid var(--Paars);
+  color: var(--Paars);
+  cursor: pointer;
 }
 
 input[type="text"]{
