@@ -36,7 +36,7 @@
 
    
 <div>  
-  
+
       <form action="./get.php" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
@@ -74,7 +74,7 @@
         </label><br>  
 
      
-        <h3>Overig</h3>
+        <h3>Extra</h3>
         <input type="radio" id="baard trimmen" name="keuzebehandelingoverig" value="Baard trimmen,15,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="baard trimmen">
           <div>Baard trimmen</div>
@@ -91,7 +91,7 @@
         </label><br>
 
       
-        <h3>Finish</h3>
+        <h3>Verzorging en styling</h3>
         <input type="radio" id="wassen" name="keuzefinish" value="Wassen,15,10" required onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassen">
           <div>Wassen</div>
@@ -113,11 +113,11 @@
 
 
 
-        <input type="radio" id="wassen en föhnen" name="keuzefinish" value="Wassen en föhnen,15,20" onclick="myFunction(); calc();">
+        <input type="radio" id="wassen en föhnen" name="keuzefinish" value="Wassen en föhnen,30,20" onclick="myFunction(); calc();">
         <label class="labelforbutton" for="wassen en föhnen">
           <div>Wassen en föhnen</div>
           <div class="infoforbutton">
-            <div>15 min</div>
+            <div>30 min</div>
             <div>20 eur</div>
           </div>
         </label><br>
@@ -297,8 +297,25 @@
         
     }
     
+    if (totaaltijd >= 60){
 
-    document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +totaaltijd +" minuten";
+      const uren = Math.floor(totaaltijd /60);
+      const minuten = totaaltijd % 60;
+  
+      if (minuten > 0){
+
+      document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +uren +" uur en " +minuten +" minuten";
+      }
+      else{
+        document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +uren +" uur";
+
+      }
+    
+    }
+    else{
+      document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +totaaltijd +" minuten";
+    }
+   
   }
 
 </script>';
