@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Covered+By+Your+Grace&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <script src="../header.js"></script>  
   <title>Afspraak maken</title>
 </head>
 <body>
@@ -19,24 +20,37 @@
       
     <div id="wrapper">
   
-      <ul>
-        <li><a href="../home/home.html">Home</a></li>
-        <li><a href="#">Modellen</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
-        <a href="../reserveringen/reserveringspage.php"><li><button>Afspraak maken</button></li></a>
-        <i class="fa-solid fa-bars fa-2x"></i>
-      </ul>
+
+        <div class="topnav" id="mytopnav">
+          <ul>
+            <p style="color: var(--Paars)">Marjolein de Kapper</p>
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="#">Modellen</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+            <li><a href="../reserveringen/reserveringspage.php"><button>Afspraak maken</button></a></li>
+            <a><i onclick="Dropdown()" class="fa-solid fa-bars fa-2x"></i></a>
+          </ul>
+        </div>
 
     </div>
 </div>
 
+<div class="dropdown" id="mydropdown">
+          <ul>
+     
+            <a href="../home/home.html"><li>Home</li></a>
+            <a href="#"><li>Modellen</li></a>
+           <a href="../contact/contact.html"> <li>Contact</li></a>
+            <a href="../reserveringen/reserveringspage.php"><li>Afspraak maken</li></a>
+         
+          </ul>
+        </div>
 
  <div id="wrapper">
   <div class="reserveringspage">
 
    
 <div>  
-
       <form action="../bevestiging/bevestigen.html" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
