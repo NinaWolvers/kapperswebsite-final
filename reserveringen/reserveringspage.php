@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Covered+By+Your+Grace&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <script src="overview.js"></script>  
   <title>Afspraak maken</title>
 </head>
 <body>
@@ -203,123 +204,7 @@
 </div>
 </div>
   
-  
 
-
-
-  <?php
-  echo'
-  <script>
-
-
-  document.getElementById("afspraakdatum").onchange=function(){
-
-    updateValue();
-  }
-
-  function updateValue(){
-
-    var input = document.getElementById("afspraakdatum").value;
-    document.getElementById("output").innerHTML= input;
-
-  }
-
-  
-
-
-
-   function myFunction() {
-
-          var keuzeb = document.getElementsByName("keuzebehandeling");
-          var over = document.getElementsByName("keuzebehandelingoverig");
-          var fin = document.getElementsByName("keuzefinish");
-          var rem = document.getElementsByName("keuzereminder");
-          var tijd = document.getElementsByName("keuzetijd");
-          
-            for (var opt of keuzeb){
-              if (opt.checked){
-                let option = opt.value.split(",");
-                document.getElementById("kb").innerHTML = option[0];
-              }
-            }
-
-            for (var opt of over){
-              if (opt.checked){
-                let option = opt.value.split(",");
-                document.getElementById("ov").innerHTML = option[0];
-              }
-            }
-
-            for (var opt of fin){
-              if (opt.checked){
-                let option = opt.value.split(",");
-                document.getElementById("fi").innerHTML = option[0];
-              }
-            }
-
-            for (var opt of rem){
-              if (opt.checked){
-                let option = opt.value.split(",");
-                document.getElementById("re").innerHTML = option[0];
-              }
-            }
-
-            for (var opt of tijd){
-              if (opt.checked){
-                let option = opt.value.split(",");
-                document.getElementById("ti").innerHTML = option[0];
-              }
-            }
-  
-          }
-
-
-  // calculate totaal
-  function calc(){
-    let totaalprijs=0;
-    let totaaltijd=0;
-
-    var rates = document.getElementsByTagName("input");
-    var value_prijs=0;
-    var value_tijd=0;
-    for(var i = 0; i < rates.length; i++){
-        if(rates[i].checked){
-          let option = rates[i].value.split(",");
-          value_prijs = option[2];
-          value_tijd = option[1];
-
-            // console.log(value_prijs);
-            
-             totaalprijs+=parseInt(value_prijs);
-             totaaltijd+=parseInt(value_tijd);
-
-        }
-        
-    }
-    
-    if (totaaltijd >= 60){
-
-      const uren = Math.floor(totaaltijd /60);
-      const minuten = totaaltijd % 60;
-  
-      if (minuten > 0){
-
-      document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +uren +" uur en " +minuten +" minuten";
-      }
-      else{
-        document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +uren +" uur";
-
-      }
-    
-    }
-    else{
-      document.getElementById("total").innerHTML = totaalprijs+ " eur" +", " +totaaltijd +" minuten";
-    }
-   
-  }
-
-</script>';
-?>
 
 </div>   
 
