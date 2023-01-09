@@ -37,7 +37,7 @@
    
 <div>  
 
-      <form action="./get.php" method="post">
+      <form action="../bevestiging/bevestigen.html" method="post">
         <p>1. Kies je behandeling</p>
         <h3>Behandeling</h3>
         <input type="radio" id="puntjes knippen" name="keuzebehandeling" value="Puntjes knippen,30,10" required onclick="myFunction(); calc();">
