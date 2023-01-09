@@ -6,7 +6,8 @@ document.getElementById("afspraakdatum").onchange=function(){
 function updateValue(){
 
   var input = document.getElementById("afspraakdatum").value;
-  document.getElementById("output").innerHTML= input;
+  let datum = new Date(input);
+  document.getElementById("output").innerHTML= datum.getDate() + "-" + (datum.getMonth()+1)+"-" + datum.getFullYear();
 
 }
 

@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Covered+By+Your+Grace&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-  <script src="overview.js"></script>  
   <title>Afspraak maken</title>
 </head>
 <body>
@@ -212,4 +211,7 @@
 </div>
 
 </body>
+
+<script src="overview.js"></script>  
+
 </html>
